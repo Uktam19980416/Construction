@@ -2,7 +2,7 @@ import { Button } from './Button'
 export const Main = () => {
   return (
     <div className="relative w-full h-screen bg-cover bg-center">
-      <div className="absolute inset-0 bg-main-image filter brightness-[70%]"></div>
+      <div className="absolute bg-main-image inset-0 filter brightness-[70%]"></div>
       <div className="relative flex flex-col justify-center w-full h-full z-10">
         <div className="container flex flex-col justify-center w-[1440px] max-w-4/5 mx-auto py-28 z-10 max-md:px-2 max-sm:w-full">
           <div className="flex flex-col justify-center gap-10 text-white">
