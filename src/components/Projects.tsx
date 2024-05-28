@@ -1,5 +1,11 @@
 import React from 'react';
 import { DirectionAwareHover } from './ui/direction-aware-hover';
+import pr1 from '../images/projects.53437eda10adf8ee97f3.jpg';
+import pr2 from '../images/project.90d0ad1f2b01cab38a88.jpg';
+import pr3 from '../images/prezident.39ffbd8cd3007f491559.jpg';
+import pr4 from '../images/school.40d7b4718a3ea2005b09.jpg';
+import pr5 from '../images/image.55d1ad86051dd5af382b.jpg';
+import pr6 from '../images/image1.59ddf8dcd5ee2719efdc.jpg';
 
 export const Projects = () => {
   return (
@@ -8,8 +14,8 @@ export const Projects = () => {
         <p className="text-4xl max-iphone:text-2xl max-iphone:text-center">Your dream home</p>
       </div>
       <div className="grid grid-cols-2 max-md:grid-cols-1 gap-10">
-      <DirectionAwareHover
-          imageUrl="/src/images/projects.53437eda10adf8ee97f3.jpg"
+        <DirectionAwareHover
+          imageUrl={pr1} // Adjusted path
           className="custom-class-name"
           childrenClassName="text-class-name"
           imageClassName="image-class-name"
@@ -24,7 +30,7 @@ export const Projects = () => {
           </div>
         </DirectionAwareHover>
         <DirectionAwareHover
-          imageUrl="/src/images/project.90d0ad1f2b01cab38a88.jpg"
+          imageUrl={pr2}
           className="custom-class-name"
           childrenClassName="text-class-name"
           imageClassName="image-class-name"
@@ -37,7 +43,7 @@ export const Projects = () => {
           </div>
         </DirectionAwareHover>
         <DirectionAwareHover
-          imageUrl="/src/images/prezident.39ffbd8cd3007f491559.jpg"
+          imageUrl={pr3}
           className="custom-class-name"
           childrenClassName="text-class-name"
           imageClassName="image-class-name"
@@ -51,7 +57,7 @@ export const Projects = () => {
         </DirectionAwareHover>
 
         <DirectionAwareHover
-          imageUrl="/src/images/school.40d7b4718a3ea2005b09.jpg"
+          imageUrl={pr4}
           className="custom-class-name"
           childrenClassName="text-class-name"
           imageClassName="image-class-name"
@@ -64,7 +70,7 @@ export const Projects = () => {
           </div>
         </DirectionAwareHover>
         <DirectionAwareHover
-          imageUrl="/src/images/image.55d1ad86051dd5af382b.jpg"
+          imageUrl={pr5}
           className="custom-class-name"
           childrenClassName="text-class-name"
           imageClassName="image-class-name"
@@ -77,7 +83,7 @@ export const Projects = () => {
           </div>
         </DirectionAwareHover>
         <DirectionAwareHover
-          imageUrl="/src/images/image1.59ddf8dcd5ee2719efdc.jpg"
+          imageUrl={pr6}
           className="custom-class-name"
           childrenClassName="text-class-name"
           imageClassName="image-class-name"
