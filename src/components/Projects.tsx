@@ -9,7 +9,7 @@ export const Projects = () => {
       </div>
       <div className="grid grid-cols-2 max-md:grid-cols-1 gap-10">
       <DirectionAwareHover
-          imageUrl="./src/images/projects.53437eda10adf8ee97f3.jpg"
+          imageUrl="/src/images/projects.53437eda10adf8ee97f3.jpg"
           className="custom-class-name"
           childrenClassName="text-class-name"
           imageClassName="image-class-name"
@@ -24,7 +24,7 @@ export const Projects = () => {
           </div>
         </DirectionAwareHover>
         <DirectionAwareHover
-          imageUrl="./src/images/project.90d0ad1f2b01cab38a88.jpg"
+          imageUrl="/src/images/project.90d0ad1f2b01cab38a88.jpg"
           className="custom-class-name"
           childrenClassName="text-class-name"
           imageClassName="image-class-name"
@@ -37,7 +37,7 @@ export const Projects = () => {
           </div>
         </DirectionAwareHover>
         <DirectionAwareHover
-          imageUrl="./src/images/prezident.39ffbd8cd3007f491559.jpg"
+          imageUrl="/src/images/prezident.39ffbd8cd3007f491559.jpg"
           className="custom-class-name"
           childrenClassName="text-class-name"
           imageClassName="image-class-name"
@@ -51,7 +51,7 @@ export const Projects = () => {
         </DirectionAwareHover>
 
         <DirectionAwareHover
-          imageUrl="./src/images/school.40d7b4718a3ea2005b09.jpg"
+          imageUrl="/src/images/school.40d7b4718a3ea2005b09.jpg"
           className="custom-class-name"
           childrenClassName="text-class-name"
           imageClassName="image-class-name"
@@ -64,7 +64,7 @@ export const Projects = () => {
           </div>
         </DirectionAwareHover>
         <DirectionAwareHover
-          imageUrl="./src/images/image.55d1ad86051dd5af382b.jpg"
+          imageUrl="/src/images/image.55d1ad86051dd5af382b.jpg"
           className="custom-class-name"
           childrenClassName="text-class-name"
           imageClassName="image-class-name"
@@ -77,7 +77,7 @@ export const Projects = () => {
           </div>
         </DirectionAwareHover>
         <DirectionAwareHover
-          imageUrl="./src/images/image1.59ddf8dcd5ee2719efdc.jpg"
+          imageUrl="/src/images/image1.59ddf8dcd5ee2719efdc.jpg"
           className="custom-class-name"
           childrenClassName="text-class-name"
           imageClassName="image-class-name"
