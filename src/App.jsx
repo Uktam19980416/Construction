@@ -7,6 +7,8 @@ import { Projects } from "./components/Projects"
 import { Services } from "./components/Services"
 import { Exchange } from "./components/Exchange"
 import { Info } from "./components/Info"
+import { Contacts } from "./components/Contacts"
+import { Footer } from "./components/Footer"
 
 function App() {
 
@@ -21,6 +23,8 @@ function App() {
       <News />
       <Exchange />
       <Info />
+      <Contacts />
+      <Footer />
     </>
   )
 }

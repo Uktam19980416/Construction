@@ -13,7 +13,7 @@ export const News = () => {
         <div className="grid grid-cols-2 max-lg:grid-cols-1 gap-10 max-xl:gap-5 mt-10">
           <div className="flex max-sm:flex-col gap-5 max-sm:gap-0 rounded-3xl bg-white shadow-2xl shadow-slate-500">
             <div className="w-1/2 max-sm:w-full h-full">
-              <img src={img1} alt="Constructor" className="w-full h-full object-cover rounded-l-3xl max-sm: rounded-r-3xl max-sm: rounded-r-3xl" />
+              <img src={img1} alt="Constructor" className="w-full h-full object-cover rounded-l-3xl max-sm:rounded-r-3xl" />
             </div>
             <div className="w-1/2 max-sm:w-full py-5 flex flex-col gap-2 max-sm:px-5">
               <Button text="News" />
