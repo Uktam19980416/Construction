@@ -3,10 +3,25 @@ import { useState, useEffect } from 'react'
 import logo from '../images/ataev2.563d9f6552a0ae9e7a2b.png'
 // import './Loader.css'
 import { NavbarMobile } from './NavbarMobile'
+import { use } from 'i18next'
 
 export const Navbar = () => {
   const [loading, setLoading] = useState(true)
   // const { t, i18n } = useTranslation()
+
+  const handleScroll = () => {
+    const header = document.querySelector('header')
+    if (window.scrollY > 250) {
+      header.classList.add('bg-[#fce8bd]')
+    } else {
+      header.classList.remove('bg-[#fce8bd]')
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -28,7 +43,7 @@ export const Navbar = () => {
           <div className="loader"></div>
         </div>
       )}
-      <header className="bg-transparent fixed top-0 left-0 w-full z-50 py-4">
+      <header className="fixed top-0 left-0 w-full z-50 py-4">
         <div className="container w-[1440px] max-w-4/5 mx-auto max-lg:hidden">
           <nav>
             <ul className="flex items-center justify-between">

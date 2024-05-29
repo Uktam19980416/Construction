@@ -23,6 +23,13 @@ export const NavbarMobile = ({ handleLogoClick, logo }) => {
     <>
       <div className="hidden max-lg:block max-lg:px-2">
         <div className="flex items-center justify-between">
+          <label htmlFor="menu-toggle" onClick={handleToggle}>
+            <i
+              className={`fa-solid fa-${
+                checked ? 'xmark' : 'bars-staggered'
+              } cursor-pointer text-2xl max-sm:text-xl`}
+            ></i>
+          </label>
           <div
             className="flex items-center cursor-pointer"
             onClick={handleLogoClick}
@@ -31,13 +38,9 @@ export const NavbarMobile = ({ handleLogoClick, logo }) => {
               <img className="w-full" src={logo} alt="Logo" />
             </div>
           </div>
-          <label htmlFor="menu-toggle" onClick={handleToggle}>
-            <i
-              className={`fa-solid fa-${
-                checked ? 'xmark' : 'bars-staggered'
-              } cursor-pointer text-2xl max-sm:text-xl`}
-            ></i>
-          </label>
+          <div className="py-1 px-2 bg-black rounded-full cursor-pointer">
+            <i className="fa-solid fa-phone text-slate-50"></i>
+          </div>
         </div>
       </div>
 
@@ -53,15 +56,8 @@ export const NavbarMobile = ({ handleLogoClick, logo }) => {
           checked ? 'left-0' : '-left-full'
         } top-0 w-full h-dvh toggled-bar flex flex-col bg-[#fce8bd] transition-all px-10 py-5 z-50`}
       >
-        <div className="flex items-center border-b-4 pb-5 justify-between">
-          <div
-            className="flex items-center cursor-pointer"
-            onClick={handleLogoClick}
-          >
-            <div className="w-[60px] max-sm:w-[40px] object-cover">
-              <img className="w-full" src={logo} alt="Logo" />
-            </div>
-          </div>
+        <div className="flex items-center pb-5 justify-between">
+          <div className="flex items-center cursor-pointer"></div>
           <label
             htmlFor="menu-toggle"
             className="max-sm:text-xl"
@@ -70,8 +66,8 @@ export const NavbarMobile = ({ handleLogoClick, logo }) => {
             <i className="fa-solid fa-xmark text-2xl text-black cursor-pointer"></i>
           </label>
         </div>
-        <div className="mt-5 flex justify-center text-center">
-          <ul className="flex flex-col gap-5">
+        <div className="mt-5 flex">
+          <ul className="flex flex-col gap-2">
             <li>
               <a className="text-xl font-medium" onClick={handleLinkClick}>
                 {t('home')}
@@ -104,42 +100,25 @@ export const NavbarMobile = ({ handleLogoClick, logo }) => {
                 Contacts
               </a>
             </li>
-            <li>
-              <a
-                className="text-xl font-medium"
-                onClick={() => changeLang('uz')}
-              >
-                UZ
-              </a>
-            </li>
-            <li>
-              <a
-                className="text-xl font-medium"
-                onClick={() => changeLang('en')}
-              >
-                ENG
-              </a>
-            </li>
-            <li>
-              <a
-                className="text-xl font-medium"
-                onClick={() => changeLang('ru')}
-              >
-                RU
-              </a>
-            </li>
-            <li>
-              <a className="text-xl font-medium" onClick={handleLinkClick}>
-                <i className="fa-brands fa-telegram text-xl font-medium cursor-pointer"></i>
-              </a>
-            </li>
-            <li>
-              <a className="text-xl font-medium" onClick={handleLinkClick}>
-                <i className="fa-brands fa-instagram text-xl font-medium cursor-pointer"></i>
-              </a>
-            </li>
           </ul>
         </div>
+        <ul className="flex items-center gap-5 mt-2">
+          <li>
+            <a className="text-xl font-medium cursor-pointer" onClick={() => changeLang('uz')}>
+              UZ
+            </a>
+          </li>
+          <li>
+            <a className="text-xl font-medium cursor-pointer" onClick={() => changeLang('en')}>
+              ENG
+            </a>
+          </li>
+          <li>
+            <a className="text-xl font-medium cursor-pointer" onClick={() => changeLang('ru')}>
+              RU
+            </a>
+          </li>
+        </ul>
       </div>
     </>
   )
