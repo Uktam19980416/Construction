@@ -35,7 +35,7 @@ export const NavbarMobile = ({ handleLogoClick, logo }) => {
             onClick={handleLogoClick}
           >
             <div className="w-[100px] max-sm:w-[60px] object-cover">
-              <img className="w-full" src={logo} alt="Logo" />
+              <img className="w-full" src={logo} alt={t("logo")} />
             </div>
           </div>
           <div className="py-1 px-2 bg-black rounded-full cursor-pointer">
@@ -70,7 +70,7 @@ export const NavbarMobile = ({ handleLogoClick, logo }) => {
           <ul className="flex flex-col gap-2">
             <li>
               <a className="text-xl font-medium" onClick={handleLinkClick}>
-                {t('home')}
+                {t('information')}
               </a>
             </li>
             <li>
@@ -88,7 +88,7 @@ export const NavbarMobile = ({ handleLogoClick, logo }) => {
                 href="#tours"
                 onClick={handleLinkClick}
               >
-                Tours
+                {t('enterprises')}
               </a>
             </li>
             <li>
@@ -97,7 +97,25 @@ export const NavbarMobile = ({ handleLogoClick, logo }) => {
                 href="#contacts"
                 onClick={handleLinkClick}
               >
-                Contacts
+                {t('advantages')}
+              </a>
+            </li>
+            <li>
+              <a
+                className="text-xl font-medium"
+                href="#contacts"
+                onClick={handleLinkClick}
+              >
+                {t('news')}
+              </a>
+            </li>
+            <li>
+              <a
+                className="text-xl font-medium"
+                href="#contacts"
+                onClick={handleLinkClick}
+              >
+                {t('communication')}
               </a>
             </li>
           </ul>

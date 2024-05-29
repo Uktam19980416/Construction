@@ -1,6 +1,8 @@
 import { useState, useEffect, useRef } from 'react'
+import { useTranslation } from 'react-i18next'
 
 export const OurCompany = () => {
+  const { t } = useTranslation()
   const [employees, setEmployees] = useState(0)
   const [objects, setObjects] = useState(0)
   const [equipment, setEquipment] = useState(0)
@@ -54,7 +56,7 @@ export const OurCompany = () => {
       <div className="relative flex flex-col justify-center items-center w-full h-full z-10">
         <div className="container flex flex-col justify-center w-[1440px] max-w-4/5 mx-auto py-28 z-10 max-md:px-2 max-sm:w-full">
           <div className="w-full text-center">
-            <p className="text-4xl text-slate-50">Our Company</p>
+            <p className="text-4xl text-slate-50">{t("company.title")}</p>
           </div>
           <div className="grid grid-cols-4 max-md:grid-cols-2 gap-5 mt-5 text-center">
             <div>
@@ -62,7 +64,7 @@ export const OurCompany = () => {
                 {employees} +
               </p>
               <p className="text-2xl text-slate-50 font-semibold max-md:text-sm">
-                Number of employees
+                {t("company.employees")}
               </p>
             </div>
             <div>
@@ -70,7 +72,7 @@ export const OurCompany = () => {
                 {objects} +
               </p>
               <p className="text-2xl text-slate-50 font-semibold max-md:text-sm">
-                Objects
+              {t("company.objects")}
               </p>
             </div>
             <div>
@@ -78,7 +80,7 @@ export const OurCompany = () => {
                 {equipment} +
               </p>
               <p className="text-2xl text-slate-50 font-semibold max-md:text-sm">
-                Special equipment
+              {t("company.equipment")}
               </p>
             </div>
             <div>
@@ -86,7 +88,7 @@ export const OurCompany = () => {
                 {years} +
               </p>
               <p className="text-2xl text-slate-50 font-semibold max-md:text-sm">
-                Years on the market
+              {t("company.years")}
               </p>
             </div>
           </div>

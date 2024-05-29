@@ -1,13 +1,12 @@
 import { useState, useEffect } from 'react'
-// import { useTranslation } from 'react-i18next'
+import { useTranslation } from 'react-i18next'
 import logo from '../images/ataev2.563d9f6552a0ae9e7a2b.png'
-// import './Loader.css'
 import { NavbarMobile } from './NavbarMobile'
-import { use } from 'i18next'
+// import { use } from 'i18next'
 
 export const Navbar = () => {
   const [loading, setLoading] = useState(true)
-  // const { t, i18n } = useTranslation()
+  const { t, i18n } = useTranslation()
 
   const handleScroll = () => {
     const header = document.querySelector('header')
@@ -36,6 +35,12 @@ export const Navbar = () => {
       window.location.reload()
     }, 1000)
   }
+
+  const handleSelect = (e) => {
+    const lang = e.target.value
+    i18n.changeLanguage(lang)
+  }
+
   return (
     <>
       {loading && (
@@ -52,17 +57,17 @@ export const Navbar = () => {
                   className="text-xl font-bold text-slate-800 cursor-pointer"
                   onClick={handleLogoClick}
                 >
-                  {/* {t('home')} */} Information
+                  {t('information')} 
                 </a>
               </li>
               <li className="list-none">
                 <a className="text-xl font-bold text-slate-800" href="#about">
-                  {/* {t('about')} */} About Us
+                  {t('about')} 
                 </a>
               </li>
               <li className="list-none">
                 <a className="text-xl font-bold text-slate-800" href="#tours">
-                  {/* {t('tours')} */} Enterprises
+                  {t('enterprises')} 
                 </a>
               </li>
               <li className="list-none">
@@ -71,7 +76,7 @@ export const Navbar = () => {
                   onClick={handleLogoClick}
                 >
                   <div className="w-[200px] object-cover">
-                    <img className="w-full" src={logo} alt="Logo" />
+                    <img className="w-full" src={logo} alt={t("logo")} />
                   </div>
                 </div>
               </li>
@@ -80,7 +85,7 @@ export const Navbar = () => {
                   className="text-xl font-bold text-slate-800"
                   href="#contacts"
                 >
-                  {/* {t('contacts')} */} Our advantages
+                  {t('advantages')} 
                 </a>
               </li>
               <li className="list-none">
@@ -88,7 +93,7 @@ export const Navbar = () => {
                   className="text-xl font-bold text-slate-800"
                   href="#contacts"
                 >
-                  {/* {t('contacts')} */} News
+                  {t('news')} 
                 </a>
               </li>
               <li className="list-none">
@@ -96,7 +101,7 @@ export const Navbar = () => {
                   className="text-xl font-bold text-slate-800"
                   href="#contacts"
                 >
-                  {/* {t('contacts')} */} Communication
+                  {t('communication')}
                 </a>
               </li>
               <li>
@@ -104,6 +109,7 @@ export const Navbar = () => {
                   name=""
                   id=""
                   className="bg-transparent outline-none text-xl font-bold text-slate-800"
+                  onChange={handleSelect}
                 >
                   <option value="en">EN</option>
                   <option value="ru">RU</option>
@@ -112,33 +118,6 @@ export const Navbar = () => {
               </li>
             </ul>
           </nav>
-
-          {/* <div className="flex items-center gap-5">
-              <p
-                className="text-xl font-bold text-slate-800 cursor-pointer"
-                // onClick={() => i18n.changeLanguage('uz')}
-              >
-                UZ
-              </p>
-              <p
-                className="text-xl font-bold text-slate-800 cursor-pointer"
-                // onClick={() => i18n.changeLanguage('en')}
-              >
-                EN
-              </p>
-              <p
-                className="text-xl font-bold text-slate-800 cursor-pointer"
-                // onClick={() => i18n.changeLanguage('ru')}
-              >
-                RU
-              </p>
-              <div>
-                <i className="fa-brands fa-telegram text-xl font-bold text-slate-800 cursor-pointer"></i>
-              </div>
-              <div>
-                <i className="fa-brands fa-instagram text-xl font-bold text-slate-800 cursor-pointer"></i>
-              </div>
-            </div> */}
         </div>
         <NavbarMobile handleLogoClick={handleLogoClick} logo={logo} />
       </header>

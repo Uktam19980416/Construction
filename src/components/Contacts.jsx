@@ -1,9 +1,11 @@
 import { useForm } from 'react-hook-form'
 import { useState } from 'react'
 import axios from 'axios'
+import { useTranslation } from 'react-i18next'
 
 export const Contacts = () => {
   const [loading, setLoading] = useState(false)
+  const { t } = useTranslation()
   const {
     register,
     handleSubmit,
@@ -42,7 +44,7 @@ export const Contacts = () => {
         <div className="absolute inset-0 bg-contact-img bg-cover bg-center filter brightness-[70%] rounded-3xl"></div>
         <div className="relative z-20 pl-10 py-10 flex flex-col gap-5 w-1/2 max-lg:w-2/3 max-md:w-full max-md:pr-10 max-iphone:px-2 max-smallest:px-0">
           <h2 className="text-4xl text-slate-50 w-full max-iphone:text-2xl">
-            Do you have any questions, suggestions or requests?
+            {(t('contacts.title'))}
           </h2>
 
           {loading && (
@@ -60,40 +62,41 @@ export const Contacts = () => {
                   d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
                 />
               </svg>
-              {/* <span className="text-slate-200">{t('contact.form.message')}</span> */}{' '}
-              OK
+              <span className="text-slate-200">{t('contacts.message')}</span>
             </div>
           )}
 
           <form
             onSubmit={handleSubmit(onSubmit)}
             className="flex flex-col gap-5"
+            data-aos="fade-up"
+            data-aos-anchor-placement="bottom-bottom"
           >
             <div>
               <input
                 type="text"
-                placeholder="Your Name *"
+                placeholder={t("contacts.namePlaceholder")}
                 className="input input-bordered w-full"
                 {...register('name', { required: true })}
               />
               {errors.name && (
-                <p className="text-red-600">Please fill in the name input!</p>
+                <p className="text-red-600">{t("contacts.errorMessage")}</p>
               )}
             </div>
             <div>
               <input
                 type="tel"
-                placeholder="Your phone number *"
+                placeholder={t("contacts.phonePlaceholder")}
                 className="input input-bordered w-full"
                 {...register('phone', { required: true })}
               />
               {errors.phone && (
-                <p className="text-red-600">Please fill in the phone input!</p>
+                <p className="text-red-600">{t("contacts.errorMessage")}</p>
               )}
             </div>
             <textarea
               className="textarea textarea-bordered"
-              placeholder="Your message..."
+              placeholder={t("contacts.textPlaceholder")}
               rows={8}
               {...register('message', { required: false })}
             ></textarea>
@@ -103,7 +106,7 @@ export const Contacts = () => {
                 type="submit"
                 disabled={loading}
               >
-                {loading ? 'Loading...' : 'Submit'}
+                {loading ? t("contacts.loading") : t("contacts.send")}
               </button>
             </div>
           </form>
