@@ -15,7 +15,7 @@ export const Projects = () => {
       </div>
       <div className="grid grid-cols-2 max-md:grid-cols-1 gap-10">
         <DirectionAwareHover
-          imageUrl={pr1} // Adjusted path
+          imageUrl={pr1}
           className="custom-class-name"
           childrenClassName="text-class-name"
           imageClassName="image-class-name"

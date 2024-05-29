@@ -5,7 +5,8 @@ import car from '../images/car.7a9117dbe6e748aa2f12.png'
 
 export const Services = () => {
   return (
-    <div className="container w-[1440px] max-w-4/5 mx-auto mt-10 max-sm:px-2 max-sm:w-full">
+    <div className="bg-[#fce8bd]">
+      <div className="container w-[1440px] max-w-4/5 mx-auto mt-10 max-sm:px-2 max-sm:w-full">
       <div className="text-center">
         <h1 className="text-4xl">Our services</h1>
       </div>
@@ -40,6 +41,7 @@ export const Services = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   )
 }

@@ -13,7 +13,7 @@ export const Main = () => {
               </p>
             </div>
             <p className="text-lg font-normal">Excellence in everything</p>
-            <div className="flex items-center gap-5">
+            <div className="flex items-center gap-5 max-smallest:flex-col max-smallest:gap-0 max-smallest:items-start">
               <Button text="Our Projects" />
               <Button text="Connection" />
             </div>

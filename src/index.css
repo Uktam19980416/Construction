@@ -9,9 +9,9 @@
   scroll-behavior: smooth;
 }
 
-body {
+/* body {
   background-color: #fce8bd;
-}
+} */
 
 #menu-toggle:checked ~ .toggled-bar {
   left: 0;
