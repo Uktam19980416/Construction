@@ -69,8 +69,7 @@ export const Contacts = () => {
           <form
             onSubmit={handleSubmit(onSubmit)}
             className="flex flex-col gap-5"
-            data-aos="fade-up"
-            data-aos-anchor-placement="bottom-bottom"
+            data-aos="zoom-in"
           >
             <div>
               <input
